@@ -1,12 +1,12 @@
-# LLM Council (terminal edition)
+# council
 
-A terminal-only fork of [karpathy/llm-council](https://github.com/karpathy/llm-council).
-Ask one question; a **council** of models each answers, peer-reviews the
-anonymized answers, and a **chairman** synthesizes the final response — rendered
-live in a split-pane TUI (or streamed plainly for pipes/CI).
+**An LLM council in your terminal.** Ask one question; a council of models each
+answers independently, peer-reviews the *anonymized* answers, and a chairman
+synthesizes the final response — live in a split-pane TUI (or streamed plainly
+for pipes/CI).
 
-No web UI, no OpenRouter, no API keys to manage. It drives three local backends
-you're already logged into:
+No web UI, no API keys to manage. It drives the agent CLIs you're already logged
+into:
 
 | Backend | Driver | Auth |
 |---|---|---|
@@ -173,3 +173,14 @@ council/
   their reasoning live.
 - These CLIs change often — providers were built after confirming each tool's
   current `--help`/event shape.
+
+## Credits
+
+council is an independent, from-scratch implementation. The deliberation protocol
+— independent answers, *anonymized* peer ranking, then chairman synthesis — was
+introduced by Andrej Karpathy's [llm-council](https://github.com/karpathy/llm-council);
+council reimagines it as a backend-agnostic terminal tool over local agent CLIs.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
