@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+
+# Keys and secrets
+.env
+
+# Council runtime
+data/
+*.transcript.md
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
