@@ -1,0 +1,45 @@
+# LLM Council roster — edit this file to add/remove members (no code changes).
+#
+# Each member has:
+#   name      : display name in the TUI / transcript
+#   backend   : claude_code | codex | ollama
+#   model     : backend-specific model id
+#   options   : optional per-model settings; reasoning_effort is mapped per backend
+#               - claude_code -> --effort <value>            (max value: xhigh)
+#               - codex       -> -c model_reasoning_effort=<value> (max value: xhigh)
+#               - ollama      -> think: <value>              (max value: max)
+#
+# All members are run at maximum reasoning effort.
+
+chairman: "Claude Opus 4.8"
+
+members:
+  - name: "Claude Opus 4.8"
+    backend: claude_code
+    model: opus
+    options: {reasoning_effort: xhigh}
+
+  - name: "GPT-5.5"
+    backend: codex
+    model: gpt-5.5            # ChatGPT auth rejects the '-codex' suffix
+    options: {reasoning_effort: xhigh}
+
+  - name: "DeepSeek V4 Pro"
+    backend: ollama
+    model: deepseek-v4-pro:cloud
+    options: {reasoning_effort: max}
+
+  - name: "GLM 5.2 (max)"
+    backend: ollama
+    model: glm-5.2:cloud
+    options: {reasoning_effort: max}
+
+  - name: "Kimi K2.6"
+    backend: ollama
+    model: kimi-k2.6:cloud
+    options: {reasoning_effort: max}
+
+  - name: "Nemotron 3 Ultra"
+    backend: ollama
+    model: nemotron-3-ultra:cloud
+    options: {reasoning_effort: max}
