@@ -32,9 +32,12 @@ aggregation and the chairman context; the run continues with the rest.
 **Homebrew (recommended):**
 
 ```bash
-brew tap speedcuber911/council https://github.com/speedcuber911/council
+brew tap speedcuber911/council
 brew install council
 ```
+
+> If your Homebrew has `HOMEBREW_REQUIRE_TAP_TRUST` set, run
+> `brew trust speedcuber911/council` once after tapping.
 
 **Or with uv / pipx (no Homebrew):**
 
